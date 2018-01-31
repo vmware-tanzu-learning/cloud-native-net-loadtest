@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net.Http;
 
-namespace bootcamp_core_loadtester
+namespace loadtest
 {
     class Program
     {
@@ -13,14 +13,13 @@ namespace bootcamp_core_loadtester
 
             for(int i = 0; i < 2500; i++)
             {
-                var result = c.GetStringAsync("https://<enter your service>/api/products").Result; 
+                var result = c.GetAsync("https://core-cf-microservice-rseroter.cfapps.io/api/products").Result; 
                 Console.WriteLine("calling API - " + DateTime.Now.ToString());
                 
                 System.Threading.Thread.Sleep(100);
             }   
 
             Console.WriteLine("done calling API");
-        
         }
     }
 }
