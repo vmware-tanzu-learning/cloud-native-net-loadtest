@@ -13,7 +13,7 @@ namespace loadtest
 
             for(int i = 0; i < 2500; i++)
             {
-                var result = c.GetAsync("{workshop url}/api/products").Result; 
+                var result = c.GetAsync("{workshop_url}/api/products").Result; 
                 Console.WriteLine("calling API - " + DateTime.Now.ToString());
                 
                 System.Threading.Thread.Sleep(100);
